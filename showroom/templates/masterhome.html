@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<title>AUTOMOTIVE SALES & SERVICES</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="keywords" content="Car Bank Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+<link href="css/font-awesome.css" rel="stylesheet" /><!-- font-awesome css -->
+<!-- bootstrap css -->
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />
+<!-- //bootstrap css -->
+<!-- style css -->
+<link href="{% static 'css/style.css' %}" rel="stylesheet" />
+<!-- //style css -->
+<!-- //lightbox files -->
+<link rel="stylesheet" href="{% static 'css/lightbox.css' %}">
+<!-- //lightbox files -->
+<!-- js -->
+<script type="text/javascript" src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+<!-- //js -->
+<link href="{% static 'css/mislider.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'css/mislider-custom.css' %}" rel="stylesheet" type="text/css" />
+<!-- bootstrap js -->
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<!-- bootstrap js -->
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+
+</head>
+<body>
+	<!-- banner -->
+	<div class="banner">
+		<div class="banner-dott">
+			<div class="container">
+				<!-- navigation -->
+				<nav class="navbar navbar-inverse" style="margin-top: -18px;">
+					<div class="navbar-header">
+					  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					  </button>
+						  <a class="navbar-brand" href=""><h1 style="margin-left: -95px;">AUTOMOTIVE SALES & SERVICES</h1></a>
+
+					</div>
+					<div class="collapse navbar-collapse" id="myNavbar">
+						<ul class="nav navbar-nav link-effect-14" id="link-effect-14" style="">
+							<li><a href="{% url 'masterhome' %}"><span>Home</span></a></li>
+							<li><a href="{% url 'addvehicle' %}" class=""><span>Vehicle</span></a></li>
+							<li><a href="{% url 'addacc' %}" class=""><span>Accessories</span></a></li>
+							<li><a href="{% url 'serviceview' %}" class=""><span>Service Booking</span></a></li>
+                            <li><a href="{% url 'breakdownview' %}" class=""><span>Breakdown Assistance</span></a></li>
+                            <li><a href="{% url 'listfeedback' %}" class=""><span>Feedback</span></a></li>
+                            <li><a href="{% url 'logout' %}" class=""><span>Logout</span></a></li>
+						</ul>
+
+					</div>
+				</nav>
+				<div class="banner-header">
+					<div class="slider">
+						<div class="callbacks_container">
+							<ul class="rslides callbacks callbacks1" id="slider4">
+								<li>
+									<div class="banner_text">
+										<p>We have made car service & maintenance easy </p>
+										<h4>Quality Service</h4>
+									</div>
+								</li>
+								<li>
+									<div class="banner_text">
+										<p> The power of dreams</p>
+										<h4>Quality Service </h4>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+							<script>
+								// You can also use "$(window).load(function() {"
+								$(function () {
+									// Slideshow 4
+									$("#slider4").responsiveSlides({
+									auto: true,
+									pager:true,
+									nav:true,
+									speed: 500,
+									namespace: "callbacks",
+									before: function () {
+											$('.events').append("<li>before event fired.</li>");
+										},
+										after: function () {
+											$('.events').append("<li>after event fired.</li>");
+										}
+									});
+								});
+							</script>
+							<!-- //banner Slider -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //navigation -->
+	<!-- //banner -->
+	<!-- services -->
+	<!-- //services -->
+	<!-- about -->
+	<div class="about" id="about">
+		<div class="container">
+			<div class="w3l_heading">
+				<h3>About Us </h3>
+			</div>
+			<div class="w3ls_banner_bottom_grids">
+				<div class="col-md-6 w3_agileits_about_grid_left">
+					<p>
+						We strive to provide the best levels of service to all our customers
+						ensuring they enjoy a safe and pleasant driving experience. We offer an extensive
+						range of car repair services for cars of all makes and models all under one roof.
+						Our highly professional and trained mechanics use the best quality products combined
+						with latest techniques for all car repair services.
+						</i>
+					</p>
+					<br/>
+					<h3>WHAT WE DO</h3>
+					<br/>
+					<ul>
+						<li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Book your service with us online</li>
+						<li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Running Repairs</li>
+						<li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Running Repairs</li>
+					</ul>
+				</div>
+				<div class="col-md-6 w3_agileits_about_grid_right">
+					<iframe src="https://player.vimeo.com/video/117822597">
+					</iframe>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //about -->
+	<!-- gallery -->
+	<div class="gallery-top" id="gallery">
+		<!-- container -->
+		<div class="container">
+			<div class="w3l_heading">
+				<h3>Our Gallery</h3>
+			</div>
+			<div class="gallery-grids-top">
+				<div class="gallery-grids">
+					<div class="col-md-6 gallery-grid-top">
+						<div class="gallery-grid-top-img">
+							<a class="example-image-link" href="{% static 'images/g-top-1.jpg' %}" data-lightbox="example-set" data-title=""><img class="example-image" src="{% static 'images/g-top-1.jpg' %}" alt=""/></a>
+						</div>
+					</div>
+					<div class="col-md-6 gallery-right">
+						<div class="gallery-right-grid">
+							<div class="col-md-6 gallery-grid-img">
+								<a class="example-image-link" href="{% static 'images/g-top-2.jpg' %}" data-lightbox="example-set" data-title=""><img class="example-image" src="{% static 'images/g-top-2.jpg' %}" alt=""/></a>
+							</div>
+							<div class="col-md-6 gallery-grid-img">
+								<a class="example-image-link" href="{% static 'images/g-top-3.jpg' %}" data-lightbox="example-set" data-title=""><img class="example-image" src="{% static 'images/g-top-3.jpg' %}" alt=""/></a>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="gallery-right-grid gallery-right-top-grid">
+							<div class="col-md-6 gallery-grid-img">
+								<a class="example-image-link" href="{% static 'images/g-top-4.jpg' %}" data-lightbox="example-set" data-title=""><img class="example-image" src="{% static 'images/g-top-4.jpg' %}" alt=""/></a>
+							</div>
+							<div class="col-md-6 gallery-grid-img">
+								<a class="example-image-link" href="{% static 'images/g-top-5.jpg' %}" data-lightbox="example-set" data-title=""><img class="example-image" src="{% static 'images/g-top-5.jpg' %}" alt=""/></a>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="gallery-grids gallery-grids-middle">
+					<div class="col-md-4 gallery-grid middle-gallery-grid">
+						<a class="example-image-link" href="{% static 'images/g-top-7.jpg' %}" data-lightbox="example-set" data-title=""><img class="example-image" src="{% static 'images/g-top-7.jpg' %}" alt=""/></a>
+					</div>
+					<div class="col-md-4 gallery-grid middle-gallery-grid">
+						<a class="example-image-link" href="{% static 'images/g-top-8.jpg' %}" data-lightbox="example-set" data-title=""><img class="example-image" src="{% static 'images/g-top-8.jpg' %}" alt=""/></a>
+					</div>
+					<div class="col-md-4 gallery-grid middle-gallery-grid">
+						<a class="example-image-link" href="{% static 'images/g-top-9.jpg' %}" data-lightbox="example-set" data-title=""><img class="example-image" src="{% static 'images/g-top-9.jpg' %}" alt=""/></a>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="gallery-grids">
+					<div class="col-md-3 gallery-grid w3-last-gallery">
+						<a class="example-image-link" href="{% static 'images/g-top-10.jpg' %}" data-lightbox="example-set" data-title=""><img class="example-image" src="{% static 'images/g-top-10.jpg' %}" alt=""/></a>
+					</div>
+					<div class="col-md-3 gallery-grid w3-last-gallery">
+						<a class="example-image-link" href="{% static 'images/g-top-11.jpg' %}" data-lightbox="example-set" data-title=""><img class="example-image" src="{% static 'images/g-top-11.jpg' %}" alt=""/></a>
+					</div>
+					<div class="col-md-3 gallery-grid w3-last-gallery">
+						<a class="example-image-link" href="{% static 'images/g-top-12.jpg' %}" data-lightbox="example-set" data-title=""><img class="example-image" src="{% static 'images/g-top-12.jpg' %}" alt=""/></a>
+					</div>
+					<div class="col-md-3 gallery-grid w3-last-gallery">
+						<a class="example-image-link" href="{% static 'images/g-top-13.jpg' %}" data-lightbox="example-set" data-title=""><img class="example-image" src="{% static 'images/g-top-13.jpg' %}" alt=""/></a>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<script src="{% static 'js/lightbox-plus-jquery.min.js' %}"></script>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //gallery -->
+	<!-- clients-section -->
+
+	<!-- //clients-section -->
+	<!-- contact -->
+	<div class="contact" id="contact">
+		<div class="container">
+			<div class="w3l_heading">
+				<h3>Contact Us</h3>
+			</div>
+			<div class="w3agile_contact_grid">
+     		<div class="col-md-6 w3agile_contact_left" style="width: 100%;">
+				<br/><center>
+				<ul class="agileinfo_contact_grid_list">
+					<li><i class="fa fa-map-marker contact_icons" aria-hidden="true"></i><span> Kaviyoor , Pathanamthitta</span>
+					<i class="fa fa-envelope-o contact_icons" aria-hidden="true"></i><a href="">car@gmail.com</a>
+					<i class="fa fa-phone contact_icons" aria-hidden="true"></i>+9134 567 567</li>
+				</ul></center>
+			</div>
+
+			<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //contact -->
+	<!--google map section ends here-->
+	<div class="agileits-w3layouts-map wow zoomIn animated" data-wow-delay=".5s">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9503398796587!2d-73.9940307!3d40.719109700000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a27e2f24131%3A0x64ffc98d24069f02!2sCANADA!5e0!3m2!1sen!2sin!4v1441710758555" allowfullscreen></iframe>
+	</div>
+	<!--/google map section ends here-->
+	<div class="footer-final">
+		<div class="copyw3-agile">
+			<div class="container">
+				<p>&copy; 2021. All rights reserved </p>
+			</div>
+		</div>
+	</div>
+	<script src="{% static 'js/SmoothScroll.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+
+	<script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+				};
+			*/
+
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+			});
+	</script>
+<!-- //here ends scrolling icon -->
+<script src="{% static 'js/responsiveslides.min.js' %}"></script>
+</body>
+</html>

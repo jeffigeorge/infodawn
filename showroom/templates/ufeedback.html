@@ -1,0 +1,10 @@
+{% extends 'uc.html' %}
+{% block content %}
+<form method="post" enctype="multipart/form-data">
+<table border="0" align="center" height="400">
+    {% csrf_token %}
+    {{ form.as_table }}
+</table>
+<br/><input type="submit" value="Submit" style="margin-left:86px;" >
+</form>
+{% endblock %}

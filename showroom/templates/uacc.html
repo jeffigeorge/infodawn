@@ -1,0 +1,15 @@
+{% extends 'uc.html' %}
+{% block content %}
+<center>ACCESSORIES</center>
+ {% for i in list %}
+<div style="width:256px;height:330px;background-color:lightgray;float: left;margin-left:45px;margin-right:30px;margin-bottom:30px;margin-top:30px;">
+     <img src="{{ i.Accessory_Image.url }}" width="255" height="250"><br/>
+      <table border="0" width="250" height="80">
+          <tr> <td colspan="2"><center>{{ i.Accessory_Name }}</center></td></tr>
+          <tr bgcolor="lightblue"><td><a href="{% url 'accessoriesdetails' i.id %}"><h4>VIEW MORE</h4></a></td>
+              <td><center><a href="{% url 'buy1' i.id %}"><h4>BUY NOW</h4></a></center></td>
+          </tr>
+     </table>
+</div>
+     {% endfor %}
+{% endblock %}

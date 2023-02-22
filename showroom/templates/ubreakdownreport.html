@@ -1,0 +1,40 @@
+{% extends 'uc.html' %}
+{% block content %}
+<style>
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+</style>
+<center><b>MESSAGE FOR BREAKDOWN ASSISTANCE</b></center>
+<table border="1">
+    <tr style="background-color: #f2f2f2;">
+        <td><b>Vehicle Name</b></td>
+        <td><b>Place_of_Breakdown</b></td>
+        <td><b>Description</b></td>
+        <td><b>Status</b></td>
+    </tr>
+    <tr>
+        {% for i in list %}
+    <tr>
+        <td>{{ i.Vehicle_Name }}</td>
+        <td>{{ i.Place_of_Breakdown }}</td>
+        <td>{{ i.Description }}</td>
+    {% if i.Reply == True %}
+    <td><b>Complaint Detected and Repaired</b></td>
+    {% else %}
+         <td> {{ i.Status }}</td>
+   {% endif %}
+
+
+    </tr>
+        {% endfor %}
+</table>
+<br/><br/><br/><br/><br/><br/><br/>
+{% endblock %}

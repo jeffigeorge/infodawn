@@ -1,0 +1,37 @@
+{% extends 'mc.html' %}
+{% block content %}
+<style>
+table {
+  border-collapse: collapse;
+  width:80%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+</style>
+<center><b>MESSAGE FROM CUSTOMERS FOR BREAKDOWN ASSISTANCE</b></center>
+<br/>
+<table border="0">
+    <tr style="background-color: #f2f2f2;">
+        <td><b>Customer name</b></td>
+        <td><b>Vehicle Name</b></td>
+        <td><b>Place of Breakdown</b></td>
+        <td><b>Description</b></td>
+        <td><b>Reply</b></td>
+    </tr>
+    <tr>
+        {% for i in list %}
+    <tr>
+        <td>{{ i.user }}</td>
+        <td>{{ i.Vehicle_Name }}</td>
+        <td>{{ i.Place_of_Breakdown }}</td>
+        <td>{{ i.Description }}</td>
+        <td><a href="{% url 'reply' i.id %}">Reply</a>
+    </tr>
+        {% endfor %}
+</table>
+<br/><br/><br/><br/><br/><br/><br/>
+{% endblock %}

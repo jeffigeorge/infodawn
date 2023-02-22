@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<title>Car Bank</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="keywords" content="Car Bank Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+<link href="{% static 'css/font-awesome.css' %}" rel="stylesheet" /><!-- font-awesome css -->
+<!-- bootstrap css -->
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />
+<!-- //bootstrap css -->
+<!-- style css -->
+<link href="{% static 'css/style.css' %}" rel="stylesheet" />
+<!-- //style css -->
+<!-- //lightbox files -->
+<link rel="stylesheet" href="{% static 'css/lightbox.css' %}">
+<!-- //lightbox files -->
+<!-- js -->
+<script type="text/javascript" src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+<!-- //js -->
+<link href="{% static 'css/mislider.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'css/mislider-custom.css' %}" rel="stylesheet" type="text/css" />
+<!-- bootstrap js -->
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<!-- bootstrap js -->
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<style>
+	input[type="email"],
+	input[type="password"],
+	input[type="text"],
+	input[type="number"],
+	input[type="date"],
+	textarea{
+	outline:none;
+	border:1px solid #ddd;
+	color:#666;
+	font-size:14px;
+	padding: 20px 20px;
+	background:#FFFFFF;
+	width: 100%;
+}
+input[type="submit"]{
+	outline: none;
+    border: 1px solid #212121;
+    color: #fff;
+    font-size:15px;
+    padding:18px 18px;
+    width: 20%;
+    background: #212121;
+    margin-top: 1em;
+    margin-left: 171px;
+}
+</style>
+</head>
+<body>
+	<!-- banner -->
+	<div class="banner">
+		<div class="banner-dott">
+			<div class="container">
+				<!-- navigation -->
+				<nav class="navbar navbar-inverse" style="margin-top: -18px;">
+					<div class="navbar-header">
+					  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					  </button>
+						  <a class="navbar-brand" href=""><h1 style="margin-left: -95px;">AUTOMOTIVE SALES & SERVICES</h1></a>
+
+					</div>
+					<div class="collapse navbar-collapse" id="myNavbar" style="    float: right;">
+						<ul class="nav navbar-nav link-effect-14" id="link-effect-14" style="margin-right: -246px;">
+							<li><a href="{% url 'home'%}"><span>Home</span></a></li>
+							<li><a href="{% url 'reg'%}" class=""><span>Registration</span></a></li>
+                            <li><a href="{% url 'login' %}" class=""><span>Login</span></a></li>
+
+						</ul>
+
+					</div>
+				</nav>
+
+			</div>
+		</div>
+	</div>
+	<!-- //navigation -->
+	<!-- //banner -->
+	<!-- services -->
+	<!-- //services -->
+	<!-- about -->
+	<div class="about" id="about">
+		<div class="container">
+			<div class="w3ls_banner_bottom_grids">
+			<center><h3>REGISTRATION</h3></center><br/>
+								<form method="post" enctype="multipart/form-data" novalidate>
+								{% csrf_token %}
+								<table align="center" height="1000">
+									<fond color="white">
+									{{ form1.as_table }}
+									{{ form2.as_table }}
+									</fond>
+								</table>
+								<br/>
+								<center><input type="submit" value="Submit" class="btn btn-primary submit" ></center>
+								<br/>
+							</form>
+
+<br/><br/><br/>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //about -->
+	<!-- gallery -->
+
+	<!-- //gallery -->
+	<!-- clients-section -->
+
+	<!-- //clients-section -->
+	<!-- contact -->
+
+	<!-- //contact -->
+	<!--google map section ends here-->
+
+	<!--/google map section ends here-->
+	<div class="footer-final">
+		<div class="copyw3-agile">
+			<div class="container">
+				<p>&copy; 2021. All rights reserved </p>
+			</div>
+		</div>
+	</div>
+	<script src="{% static 'js/SmoothScroll.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+
+	<script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+				};
+			*/
+
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+			});
+	</script>
+<!-- //here ends scrolling icon -->
+<script src="{% static 'js/responsiveslides.min.js' %}"></script>
+</body>
+</html>

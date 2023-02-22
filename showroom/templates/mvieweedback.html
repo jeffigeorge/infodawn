@@ -1,0 +1,33 @@
+{% extends 'mc.html' %}
+{% block content %}
+<style>
+    table {
+  border-collapse: collapse;
+  width:80%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+</style>
+<center>
+    <h2>View Feedback</h2><br/>
+<table border="0" width="500" bgcolor="lightgray">
+    <tr>
+        <td>Name</td>
+        <td>Email Id</td>
+        <td>Feedback</td>
+    </tr>
+    {% for i in list %}
+    <tr>
+        <td>{{ i.Name }}</td>
+        <td>{{ i.Email }}</td>
+        <td>{{ i.feedback }}</td>
+    </tr>
+    {% endfor %}
+</table><br/><br/>
+    </center>
+{% endblock %}

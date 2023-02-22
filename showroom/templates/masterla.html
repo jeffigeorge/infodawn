@@ -1,0 +1,37 @@
+{% extends 'mc.html' %}
+{% block content %}
+<style>
+    table {
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+</style>
+<center><h1>Accessories</h1></center>
+<table border="1">
+    <tr>
+        <td>Accessory name</td>
+        <td>Vehicle Name</td>
+        <td>Description</td>
+        <td>Amount</td>
+        <td>Image</td>
+        <td>Update</td>
+    </tr>
+    <tr>
+        {% for i in list %}
+    <tr>
+        <td>{{ i.Accessory_Name }}</td>
+        <td>{{ i.Vehicle_Name }}</td>
+        <td>{{ i.Description }}</td>
+        <td>{{ i.Rate }}</td>
+        <td><img src="{{ i.Accessory_Image.url }}" width="100" height="100"></td>
+        <td><a href="{% url 'upacc' i.id %}" >Update</a><br/><a href="{% url 'deacc' i.id %}" >Delete</a></td>
+    </tr>
+        {% endfor %}
+</table>
+{% endblock %}

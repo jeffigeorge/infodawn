@@ -1,0 +1,41 @@
+{% extends 'mc.html' %}
+{% block content %}
+<style>
+    table {
+  border-collapse: collapse;
+  width:50%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+</style>
+<center><h2 class="heading-agileinfo">Details of Vehicles</h2></center>
+  {% for i in list %}
+    <table border="1">
+    <tr>  <td colspan="2"><img src="{{ i.Vehicle_Image.url }}" width="850" height="400"></td> </tr>
+    <tr><td>Vehicle_Name</td><td>{{ i.Vehicle_Name }}</td></tr>
+      <tr> <td>Vehicle Type</td> <td>{{ i.Vehicle_Type }}</td></tr>
+       <tr> <td>Description</td><td>{{ i.Description }}</td></tr>
+       <tr>  <td>Vehicle_Color</td> <td>{{ i.Vehicle_Color }}</td></tr>
+       <tr> <td> Rate </td><td>{{ i.Rate }}Lakhs</td></tr>
+       <tr> <td> Weight </td> <td>{{ i.Weight }}Kgm</td></tr>
+      <tr> <td> Capacity </td> <td>{{ i.Capacity }} litre</td></tr>
+      <tr>  <td> Mileage </td> <td>{{ i.Mileage }}km</td></tr>
+       <tr> <td> Fuel </td><td>{{ i.Fuel }}</td></tr>
+      <tr>  <td> Vehicle_Model </td> <td>{{ i.Vehicle_Model }}</td></tr>
+      <tr>  <td>Year_of_built</td> <td>{{ i.Year_of_built }}</td></tr>
+      <tr> <td>Autogear</td>  <td>{{ i.Autogear }}</td></tr>
+       <tr> <td> Seatcap</td> <td>{{ i.Seatcap }}</td></tr>
+      <tr>   <td>Center_lock </td> <td>{{ i.Center_lock }}</td></tr>
+      <tr> <td>Power_steering </td><td>{{ i.Power_steering }}</td></tr>
+      <tr>   <td>Tyre </td> <td>{{ i.Tyre }}</td></tr>
+       <tr>   <td> Chassis</td><td>{{ i.Chassis }}</td></tr>
+        <tr> <td colspan="2"><center><button> <a href="{% url 'upvehicle' i.id %}" >UPDATE</a></button><button><a href="{% url 'devehicle' i.id %}" >DELETE</a></button></center></td></tr>
+
+    {% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'uc.html' %}
+{% block content %}
+<style>
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+</style>
+<center><table border="1" width="600">
+         <tr><td colspan="2"><center><img src="{{ object.Accessory_Image.url }}" width="600" height="350"></center></td> </tr>
+         <tr> <td>Accessory Name</td><td>{{ object.Accessory_Name }}</td></tr>
+         <tr> <td>Vehicle Name</td><td>{{ object.Vehicle_Name }}</td></tr>
+         <tr> <td>Description</td><td>{{ object.Description }}</td></tr>
+         <tr> <td>Rate</td><td>{{ object.Rate }}</td></tr>
+ </table>
+ </center>
+{% endblock %}

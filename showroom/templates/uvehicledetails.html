@@ -1,0 +1,30 @@
+{% extends 'uc.html' %}
+{% block content %}
+<style>
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+</style>
+<div style="margin-left: -631px;"><img src="{{ object.Vehicle_Image.url }}" width="600" height="350"></div>
+<table border="1" width="600" style="    margin-right: -572px; margin-top: -350px;">
+         <tr><td>Vehicle Name:</td> <td>{{ object.Vehicle_Name }}</td><td width="150">Vehicle Type</td><td width="150">{{ object.Vehicle_Type }}</td></tr>
+         <tr> <td>Description</td><td>{{ object.Description }}</td><td>Vehicle_Color</td> <td>{{ object.Vehicle_Color }}</td></tr>
+         <tr> <td>Rate</td><td>{{ object.Rate }}Rs/-</td> <td>Weight</td><td>{{ object.Weight }}Kgms</td></tr>
+        <tr> <td>Capacity</td><td>{{ object.Capacity }}ltr</td> <td>Mileage</td><td>{{ object.Mileage }}</td></tr>
+        <tr> <td>Fuel</td><td>{{ object.Fuel }}</td> <td>Vehicle_Model</td><td>{{ object.Vehicle_Model }}</td></tr>
+        <tr> <td>Year_of_built</td><td>{{ object.Year_of_built }}</td><td>Autogear</td><td>{{ object.Autogear }}</td></tr>
+        <tr> <td>Seatcap</td><td>{{ object.Seatcap }}</td> <td>Center_lock</td><td>{{ object.Center_lock }}</td></tr>
+        <tr> <td>Power_steering</td><td>{{ object.Power_steering }}</td> <td>Power_break</td><td>{{ object.Power_break }}</td></tr>
+        <tr> <td>Tyre</td><td>{{ object.Tyre }}</td><td>Chassis</td><td>{{ object.Chassis }}</td></tr>
+
+
+
+ </table>
+{% endblock %}
