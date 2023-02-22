@@ -1,0 +1,23 @@
+{% extends 'webapp/ac.html' %}
+{% block content %}
+<br/>
+<center><h2>Restaurent Details</h2></center>
+<table border="1" align="center">
+    <tr>
+        <td>Restaurant Name</td>
+        <td>Info</td>
+        <td>Location</td>
+        <td>Logo</td>
+    </tr>
+    {% for i in list %}
+    <tr>
+        <td>{{ i.rname }}</td>
+        <td>{{ i.info }}</td>
+        <td>{{ i.location }}</td>
+        <td><img src="{{ i.r_logo.url }}" width="100" height="100"></td>
+
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

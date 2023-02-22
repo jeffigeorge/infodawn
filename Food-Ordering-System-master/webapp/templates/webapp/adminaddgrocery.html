@@ -1,0 +1,15 @@
+{% extends 'webapp/ac.html' %}
+{% block content %}
+<div class="login-agileinfo">
+<form method="post" enctype="multipart/form-data">
+    <center><h1>Enter Grocery Details Here</h1></center>
+    <table border="0" align="center" width="450">
+            {% csrf_token %}
+
+              {{ form.as_table }}
+    </table>
+    <br/>
+           <center> <input type="submit" value="Submit"></center>
+   </form>
+</div>
+{% endblock %}

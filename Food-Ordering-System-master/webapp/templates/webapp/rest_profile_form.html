@@ -1,0 +1,47 @@
+{% extends 'webapp/rc.html'%}
+{% block title %}Update restaurant profile {% endblock %}
+
+{% block content %}
+<style>
+	input[type="file"],
+	 select
+	 {
+	padding: 16px 15px;
+	display: block;
+	width: 100%;
+	background: none;
+	border: 1;
+	outline: none;
+	color: #464646;
+	font-size: 1em;
+	box-shadow: inset 0px 0px 3px #999;
+	-webkit-box-shadow: inset 0px 0px 3px #999;
+	-moz-box-shadow: inset 0px 0px 3px #999;
+	-o-box-shadow: inset 0px 0px 3px #999;
+	-webkit-appearance: none;
+	font-family: 'Source Sans Pro', sans-serif;
+	}
+</style>
+<div class="container">
+	<h2 class="text-center">{{title}}</h2>
+</div>
+<div class="login-page about" style="margin-top: -89px;">
+		<img class="login-w3img" src="images/img3.jpg" alt="">
+		<div class="container">
+			<div class="login-agileinfo">
+		<form method="post" class="form-horizontal" enctype="multipart/form-data">
+  			{% csrf_token %}
+  			{% for field in form %}
+			{{ field.errors }}
+			<br/>
+			{{ field.label_tag }}
+			{{ field }}
+			{% endfor %}
+			<br/>
+			<center>
+       <button type="submit" class="btn btn-success btn-lg">Save</button></center>
+		</form>
+	</div>
+		</div>
+	</div>
+{% endblock%}

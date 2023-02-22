@@ -1,0 +1,22 @@
+{% extends 'webapp/ac.html' %}
+{% block content %}
+<br/>
+<center><h2>Customer Details</h2></center>
+<table border="1" align="center">
+    <tr>
+        <td>Name</td>
+        <td>City</td>
+        <td>Phone Number</td>
+        <td>Address</td>
+
+    {% for i in list %}
+    <tr>
+        <td>{{ i.f_name }}{{ i.l_name }}</td>
+        <td>{{ i.city }}</td>
+        <td>{{ i.phone }}</td>
+        <td>{{ i.address }}</td>
+
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

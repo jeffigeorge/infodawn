@@ -1,0 +1,19 @@
+{% extends 'webapp/uc1.html' %}
+{% block content %}
+<div style="margin-left: -6px"><img src="{{ object.Image.url }}" width="400" height="">
+<br/>
+    <button style="    margin-left: 96px; width: 200px;  background-color: aliceblue;">
+        <a href="{% url 'buy' object.id %}">Buy Now</a> </button>
+</div>
+ <center>
+     <table border="1" height="500" width="200" style="    margin-right: -325px; margin-top: -396px; width: 683px;">
+         <tr><td width="50">Product Name:</td> <td width="150">{{ object.Product_name }}</td></tr>
+           <tr> <td>Manufacturing Date</td><td>{{ object.Manufacturing_date }}</td></tr>
+         <tr> <td>Net Quantity</td><td>{{ object.Net_Quantity }}</td></tr>
+         <tr> <td>Price</td> <td>{{ object.Price }}Rs/-</td></tr>
+         <tr> <td>Description</td><td>{{ object.Description }}</td></tr>
+         <tr> <td>Test Status</td><td>{{ object.Test_Status }}</td></tr>
+     </table>
+ </center>
+<br/><br/><br/><br/><br/>
+{% endblock %}

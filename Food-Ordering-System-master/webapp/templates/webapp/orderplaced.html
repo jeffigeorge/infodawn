@@ -1,0 +1,33 @@
+{% extends 'webapp/uc1.html'%}
+{% block title %}orderplaced{% endblock %}
+
+{% block content %}
+	<div class="container">
+		<br>
+		<h1 class="text-center"><strong>Thank You For Placing Order</strong></h1>
+		<br>
+		<h2 class="text-center"><strong>Waiting for Confirmation</strong></h2>
+
+	</div>
+	<br>
+	<br>
+	<br>
+ <table class="table table-striped">
+    <tr>
+        <td>Total Price</td>
+        <td>Book Now</td>
+    </tr>
+    {% for item in list %}
+    <tr>
+
+        <td>{{item.total_amount}}</td>
+        <td> <button> <a href="{% url 'buy1' item.id %}">Pay Now </a></button></td>
+    </tr>
+    {% endfor %}
+</table>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+{% endblock%}

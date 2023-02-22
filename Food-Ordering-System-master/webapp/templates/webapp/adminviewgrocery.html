@@ -1,0 +1,33 @@
+{% extends 'webapp/ac.html' %}
+{% block content %}
+<br/>
+<center><h2>Grocery Details</h2></center>
+<table border="1" align="center">
+    <tr>
+        <td>Product Name</td>
+        <td>Manufacturing Date</td>
+        <td>Net Quantity</td>
+        <td>Price</td>
+        <td>Description</td>
+        <td>Image</td>
+        <td>Test Status</td>
+        <td>Availability</td>
+        <td>Update details</td>
+        <td>Remove Details</td>
+    </tr>
+    {% for i in list %}
+    <tr>
+        <td>{{ i.Product_name }}</td>
+        <td>{{ i.Manufacturing_date }}</td>
+        <td>{{ i.Net_Quantity }}</td>
+        <td>{{ i.Price }}Rs/-</td>
+        <td>{{ i.Description }}</td>
+        <td><img src="{{ i.Image.url }}" width="100" height="100"></td>
+        <td>{{ i.Test_Status }}</td>
+        <td>{{ i.Availability }} Nos</td>
+        <td><a href="{% url 'uppdt' i.id %}" >Update</a></td>
+         <td><a href="{% url 'delpdt' i.id %}" >Remove</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
